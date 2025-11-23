@@ -1,0 +1,21 @@
+class person:
+    def __init__(self,name,id):
+        self.name = name
+        self.id=id
+    def display(self):
+        print("My name is ",self.name)
+        print("My id is ",self.id)
+    
+class employee(person):
+    def __init__(self,name,id,post,salary):
+        person.__init__(self,name,id)
+        self.post = post
+        self.salary = salary
+    def display_emp(self):
+        self.display()
+        print("my salary is ",self.salary)
+        print("my post is ",self.post)
+
+
+emp1=employee("Rakesh","9023408120398","300000",'Engineer')
+emp1.display_emp()
